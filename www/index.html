@@ -1,18 +1,42 @@
 <!doctype html>
 <html>
-    <head>
-        <meta charset="utf-8">
-        <meta name="description" content="Your first best practice project !">
-        <meta name="viewport" content="width=device-width, initial-scale=1">
-        <title>Best practice project</title>
-        <link rel="stylesheet" href="css/main.css">
-        <link rel="author" href="humans.txt">
-    </head>
-    <body>
-        <section class="container">
-            <h1>Welcome to your clean best practice !</h1>
+<head>
+    <meta charset="utf-8">
+    <meta name="description" content="Your first best practice project !">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <title>Best practice project</title>
+    <link rel="stylesheet" href="css/main.css">
+    <link rel="author" href="humans.txt">
+</head>
+<body>
+<div class="flexbox-center">
+        <!-- Punchline -->
+        <section class="container punchLine text-center">
+            <h3>La plateforme</h3>
+            <h1>Des fans d'esport !</h1>
+            <h6>Débarque dans</h6>
         </section>
+        <!-- Countdown -->
+        <section class="container">
+            <div class="countdownTitle">
+                <ul class="list-inline text-center">
+                    <li class="col-xs-3">Jours</li>
+                    <li class="col-xs-3">Heures</li>
+                    <li class="col-xs-3">Minutes</li>
+                    <li class="col-xs-3">Secondes</li>
+                </ul>
+            </div>
+            <div class="countdown">
+                <ul class="list-inline text-center">
+                    <li class="col-xs-3 day"></li>
+                    <li class="col-xs-3 hour"></li>
+                    <li class="col-xs-3 minute"></li>
+                    <li class="col-xs-3 second"></li>
+                </ul>
+            </div>
+        </section>
+    </div>
 
-        <script data-main="js/main.min" src="js/lib/require.js"></script>
-    </body>
+    <script data-main="js/main.min" src="js/lib/require.js"></script>
+</body>
 </html>

@@ -6,5 +6,8 @@
 @import '../../../bower_components/bootstrap-sass/assets/stylesheets/bootstrap';
 // Desktop
 @import 'home';
+@import 'countdown';
 // Responsives
-@import '_home-responsive'
+@import 'home-responsive';
+// Tools
+@import 'tools'

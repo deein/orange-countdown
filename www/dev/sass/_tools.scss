@@ -1,0 +1,7 @@
+.flexbox-center{
+	height: 100%;
+	@include display-flex;
+	@include align-items(center);
+	@include justify-content(center);
+	@include flex-direction(column);
+}

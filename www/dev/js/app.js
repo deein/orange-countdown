@@ -1,13 +1,17 @@
+// Require Config
 requirejs.config({
     baseUrl: 'js/lib',
     paths: {
         app: 'js'
     }
 });
-require.config({
+requirejs.config({
     shim: {
         'jquery': {
             exports: 'jQuery'
+        },
+        'countdown': {
+            deps: ['jquery']
         },
         'bootstrap': {
             deps: ['jquery']
@@ -15,13 +19,28 @@ require.config({
     },
     paths: {
         'jquery': 'jquery',
+        'countdown': 'jquery.countdown',
         'bootstrap': 'bootstrap'
     }
 });
-require(['jquery', 'bootstrap'], function(jQuery) {
+// Require App
+requirejs(['jquery', 'countdown', 'bootstrap'], function(jQuery) {
     jQuery(function() {
+        // Ready
         jQuery(document).ready(function() {
-			console.log('It works !');
-		});
+            // console.log('It works !');
+            GetDateInterval();
+        });              
+        // Get interval countdown
+        function GetDateInterval(){            
+            jQuery.get('date.php', function( data ) {
+                jQuery('.countdown').countdown(data, function(event) {
+                    $('.day').html(event.strftime('%D'));
+                    $('.hour').html(event.strftime('%H'));
+                    $('.minute').html(event.strftime('%M'));
+                    $('.second').html(event.strftime('%S'));
+                });
+            });
+        }
     });
 });
