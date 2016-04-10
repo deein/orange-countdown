@@ -1,3 +1,50 @@
-.countdown{
-	font-size:100px;
+.page-countdown{
+	@include flex(1);
+	.countdown{
+		font-size:120px;
+		font-weight: bold;
+		text-align:center;
+		@include display-flex;
+		@include align-items(center);
+		@include justify-content(center);
+		@include flex-wrap(wrap);
+		ul{
+			width:960px;
+			@include display-flex;
+			@include align-items(center);
+			@include justify-content(center);
+			@include flex-direction(row);
+			li{
+				margin:0 $grid-gutter-width;
+			}
+		}
+		.countdownTitle{
+			font-size: 20px;
+			font-weight: normal;
+			height: 20px;
+			li{
+				width: 200px;
+			}
+		}
+		.block{
+			width: 200px;
+			height: 200px;
+			line-height: 230px;
+			@include box-shadow(rgba(#05163e, .25) 0 1px 2px 0);
+		}
+		.day{
+			background: $brand-orange;
+		}
+		.hour{
+			color: $brand-black;
+			background: $brand-white;
+		}
+		.minute{
+			background: $brand-orange;
+		}
+		.second{
+			color: $brand-black;
+			background: $brand-white;
+		}
+	}
 }

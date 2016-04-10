@@ -1,0 +1,33 @@
+header{
+	height: $navbar-height + $grid-gutter-width;
+	margin-bottom: ($grid-gutter-width)*2;
+	margin-top: ($grid-gutter-width)*2;
+	.row > div{
+			display: inline-block; /* non-flexbox browsers */
+			@include display-flex;
+			@include align-items(flex-start);
+		}
+	a{
+		text-decoration: none;
+		display: inline-block;
+		color: $brand-white;
+		&:hover{
+			text-decoration: none;
+			color: $brand-white;
+		}
+		h1{
+			font-size:$font-size-sub-headline;
+			line-height:($font-size-sub-headline)+21px;
+			padding:0;
+			margin-bottom:0;
+			font-weight:bold;
+			@include align-self(flex-end);
+		}
+	}
+	a{
+		img{
+			height: $navbar-height;
+			margin-right: ($grid-gutter-width)+10px;
+		}	
+	}		
+}

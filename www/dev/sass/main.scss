@@ -4,10 +4,15 @@
 @import 'variables';
 // Bootstrap
 @import '../../../bower_components/bootstrap-sass/assets/stylesheets/bootstrap';
+// Font-awesome
+@import '../../../bower_components/font-awesome/scss/font-awesome';
+// Tools
+@import 'tools';
 // Desktop
+@import 'header';
 @import 'home';
 @import 'countdown';
 // Responsives
+@import 'header-responsive';
 @import 'home-responsive';
-// Tools
-@import 'tools'
+@import 'countdown-responsive';

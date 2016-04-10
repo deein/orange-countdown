@@ -1,5 +1,10 @@
+.container-full{
+	position: relative;
+	width:100%;
+	overflow:hidden;
+}
+
 .flexbox-center{
-	height: 100%;
 	@include display-flex;
 	@include align-items(center);
 	@include justify-content(center);

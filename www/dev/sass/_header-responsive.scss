@@ -1,0 +1,43 @@
+// Smartphone portrait
+@media (min-width: $screen-xs-min) and (max-width: $screen-xs-max) and (orientation : portrait){
+	header{
+		a{
+			img{
+			    margin-right: 20px;
+			}
+			h1{
+				font-size: 26px;	
+			}
+		}
+	}
+}
+
+// Smartphone landscape
+@media (min-width: $screen-xs-min) and (max-width: $screen-xs-max) and (orientation : landscape){
+	header{
+		margin-bottom:0;
+		margin-top:20px;
+		a{
+			img{
+			    margin-right: 20px;
+			}
+			h1{
+				font-size: 26px;	
+			}
+		}
+	}
+}
+
+// Tablet portrait
+@media (min-width: $screen-sm-min) and (max-width: $screen-sm-max) and (orientation : portrait) {
+}
+
+// Tablet landscape
+@media (min-width: $screen-sm-min) and (max-width: $screen-sm-max) and (orientation : landscape) {
+}
+
+// Normal Desktop
+@media (min-width: $screen-md-min) and (max-width: $screen-md-max){
+	body{
+	}
+}

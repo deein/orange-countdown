@@ -33,12 +33,16 @@ requirejs(['jquery', 'countdown', 'bootstrap'], function(jQuery) {
         });              
         // Get interval countdown
         function GetDateInterval(){            
-            jQuery.get('date.php', function( data ) {
+            jQuery.get('date.php', function(data) {
                 jQuery('.countdown').countdown(data, function(event) {
                     $('.day').html(event.strftime('%D'));
                     $('.hour').html(event.strftime('%H'));
                     $('.minute').html(event.strftime('%M'));
                     $('.second').html(event.strftime('%S'));
+                }).on('finish.countdown', function(event){
+                    jQuery.post('date.php', function(data){
+                        window.location.replace(data);
+                    })
                 });
             });
         }

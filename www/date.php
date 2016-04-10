@@ -14,6 +14,11 @@
 
 	// echo ($interval->format('%d:%H:%I:%S'));
 	// echo json_encode($returnInterval);
-	echo ($endDate->format('Y/m/d H:i:s'));
+
+	if($startDate >= $endDate){
+		echo "http://www.google.fr";
+	}else{
+		echo ($endDate->format('Y/m/d H:i:s'));
+	}
 
 ?>
