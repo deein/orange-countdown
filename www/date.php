@@ -2,7 +2,7 @@
 
 	date_default_timezone_set('Europe/Paris');
 	$startDate = new DateTime('now');
-	$endDate = new DateTime('2016-04-18 20:00:00');
+	$endDate = new DateTime('2016-04-18 19:00:00');
 	$interval = $startDate->diff($endDate);
 
 	$returnInterval = array(
